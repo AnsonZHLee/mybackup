@@ -25,8 +25,41 @@
     });
 })(jQuery)
 
-// 鍵盤
-function sendCheck(){
-    console.log("施工中");
-    alert("施工中");
+function sendCheck()
+{
+    var pass = true;
+    // 初始化
+    $('input').each(function(){
+        $(this).css({'background-color':'white'});
+    });
+
+    // check
+    $($('li.active>a').attr('href')+' input').each(function(){
+        if( $(this).val()=="" ){
+            $(this).css({'background-color':'pink'});
+            alert("請輸入"+$(this).attr('placeholder'));
+            pass = false;
+        }
+    });
+
+    if(pass){doJoin();}
+}
+
+function doJoin()
+{
+    alert("doJoin");
+    // 初始化
+    /*$('.imgbox').each(function(){
+        $(this).removeClass('error');
+        $(this).siblings('.prompt_box').hide();
+    });
+
+    // check
+    $($('li.active>a').attr('href')+' input').each(function(){
+        if( $(this).val()=="" ){
+            $(this).siblings('div.imgbox').addClass('error');
+            $(this).siblings('.prompt_box').show();
+            alert("請輸入"+$(this).attr('placeholder'));
+        }
+    });*/
 }

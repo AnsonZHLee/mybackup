@@ -27,17 +27,22 @@
                 <li><a href="#tab1">登入</a></li>
                 <li><a href="#tab2">忘記密碼</a></li>
                 <li><a href="#tab3">無法登入</a></li>
-                <!-- <li><a>&#32;</a></li> -->
             </ul>
             <div class="tab_box">
                 <div id="tab1">
                 	<li>
                 		<div class="imgbox"><img src="images/login_A.png" /></div>
-                		<input name="acnt" placeholder="帳號" />
+                		<input type="text" name="acnt" placeholder="帳號" />
+                        <div class="prompt_box acnt">
+                            <a class="prompt">✕</a>
+                        </div>
                 	</li>
                 	<li>
                 		<div class="imgbox"><img src="images/login_B.png" /></div>
-                		<input name="pswd" placeholder="密碼" />
+                		<input type="password" name="pswd" placeholder="密碼" />
+                        <div class="prompt_box pswd">
+                            <a class="prompt">✕</a>
+                        </div>
                 	</li>
                 	<li>
                 		<a class="btn" onclick="sendCheck()">送出</a>
@@ -46,7 +51,7 @@
                 <div id="tab2">
                 	<li>
                 		<div class="imgbox"><img src="images/login_C.png" /></div>
-                		<input name="email" placeholder="E-mail" />
+                		<input type="text" name="email" placeholder="E-mail" />
                 	</li>
                 	<li>
                 		<a class="btn">送出</a>

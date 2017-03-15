@@ -51,14 +51,13 @@ section.login article.panel {
 	min-height: 282px;
 	margin: 0 auto;
 	background-color: rgba(245,245,245,.3);
-	overflow: hidden;
 }
 
 section.login article .tabs {
 	width: 100%;
 }
 section.login article.panel .tabs>ul, section.login article.panel .tabs li {
-	margin: 0;
+	margin: 0 0 5px 0;
 	padding: 0;
 	list-style: none;
 }
@@ -125,6 +124,7 @@ section.login div.tab_box div ul {
 	border-radius: 10px;
 }
 section.login div.tab_box>div {
+	position: relative;
 	/*margin-top: 55px;*/
 	margin-top: calc(16vh - 51px);
 	text-align: center;
@@ -148,6 +148,9 @@ section.login div.tab_box div.imgbox {
 	background: #35c0a0;
 	overflow: hidden;
 }
+section.login div.tab_box div.imgbox.error {
+	background-color: #d32747;
+}
 section.login div.tab_box div.imgbox img {
 	width: 70%;
 	height: 70%;
@@ -166,6 +169,43 @@ section.login div.tab_box a.btn {
 	cursor: pointer;
 }
 
+section.login div.tab_box .prompt_box {
+	position: absolute;
+	right: 10px;
+	z-index: 2;
+	display: none;
+	border-right: 1px #328572 solid;
+	border-radius: 5px;
+}
+section.login div.tab_box .prompt_box.acnt {
+	top: 0;
+}
+section.login div.tab_box .prompt_box.pswd {
+	top: 55px;
+}
+section.login div.tab_box .prompt {
+	position: relative;
+	width: 10px;
+    height: 10px;
+    text-align: center;
+    font-size: 250%;
+    color: #fff;
+    background-color: #d32747;
+    margin-left: 15px;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+section.login div.tab_box .prompt:after {
+	content: "";
+	position: absolute;
+    top: 8px;
+    left: -30px;
+    width: 0px;
+    height: 0px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent #d32747 transparent  transparent ;
+}
 
 
 
